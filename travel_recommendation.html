@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover premium travel recommendations and search curated destinations with I Love Travel.">
+    <title>I Love Travel</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./travel_recommendation.css">
+</head>
+<body id="home-page" class="page page-home">
+    <header id="site-header" class="site-header">
+        <nav id="primary-navigation" class="site-nav" aria-label="Primary navigation">
+            <a id="brand-link" class="brand" href="./travel_recommendation.html" aria-label="I Love Travel home">
+                <img id="brand-logo" class="brand__logo" src="./images/logo.png" alt="I Love Travel logo">
+                <span id="brand-name" class="brand__name">I Love Travel</span>
+            </a>
+            <ul id="nav-menu" class="nav-menu">
+                <li class="nav-menu__item"><a id="nav-home" class="nav-menu__link nav-menu__link--active" href="./travel_recommendation.html" aria-current="page">Home</a></li>
+                <li class="nav-menu__item"><a id="nav-about" class="nav-menu__link" href="./about_us.html">About Us</a></li>
+                <li class="nav-menu__item"><a id="nav-contact" class="nav-menu__link" href="./contact_us.html">Contact Us</a></li>
+            </ul>
+            <form id="destination-search-form" class="search-form" name="destinationSearchForm" action="#" method="get" role="search" novalidate>
+                <label class="sr-only" for="destination-search-input">Search destinations</label>
+                <input
+                    id="destination-search-input"
+                    class="search-form__input"
+                    type="search"
+                    name="destinationQuery"
+                    placeholder="Search beaches, temples, cities..."
+                    autocomplete="off"
+                    inputmode="search"
+                    aria-label="Search destinations"
+                    data-js="destination-search-input"
+                >
+                <button
+                    id="destination-search-submit"
+                    class="button button--primary"
+                    type="submit"
+                    name="searchAction"
+                    value="search"
+                    data-js="destination-search-submit"
+                >
+                    Search
+                </button>
+                <button
+                    id="destination-search-reset"
+                    class="button button--ghost"
+                    type="reset"
+                    name="resetAction"
+                    value="reset"
+                    data-js="destination-search-reset"
+                >
+                    Clear
+                </button>
+            </form>
+        </nav>
+    </header>
+    <section id="search-results-section" class="results-section results-section--top" aria-labelledby="search-results-title" hidden>
+        <div id="search-results-header" class="results-section__header">
+            <p id="search-results-eyebrow" class="results-section__eyebrow">Search results</p>
+            <h2 id="search-results-title" class="results-section__title">Recommended places</h2>
+            <p id="search-results-summary" class="results-section__summary" data-js="search-results-summary"></p>
+        </div>
+        <div id="search-results-grid" class="results-grid" data-js="search-results-grid"></div>
+    </section>
+    <main id="page-content" class="page-content">
+        <aside id="social-sidebar" class="social-sidebar" aria-label="Social media links">
+            <ul id="social-links" class="social-links">
+                <li class="social-links__item"><a id="social-x" class="social-links__link" href="#" target="_blank" rel="noopener noreferrer" data-platform="x">X.com</a></li>
+                <li class="social-links__item"><a id="social-facebook" class="social-links__link" href="#" target="_blank" rel="noopener noreferrer" data-platform="facebook">Facebook</a></li>
+                <li class="social-links__item"><a id="social-instagram" class="social-links__link" href="#" target="_blank" rel="noopener noreferrer" data-platform="instagram">Instagram</a></li>
+                <li class="social-links__item"><a id="social-youtube" class="social-links__link" href="#" target="_blank" rel="noopener noreferrer" data-platform="youtube">YouTube</a></li>
+            </ul>
+        </aside>
+        <section id="hero-section" class="hero-section" aria-labelledby="hero-title">
+            <div id="hero-content" class="hero-section__content">
+                <p id="hero-eyebrow" class="hero-section__eyebrow">Curated escapes. Elevated journeys.</p>
+                <h1 id="hero-title" class="hero-section__title">Explore dream destinations with a sharper point of view</h1>
+                <p id="hero-description" class="hero-section__description">
+                    I Love Travel helps travelers explore iconic places, hidden gems, and itinerary ideas with a premium, editorial feel.
+                </p>
+                <div id="hero-actions" class="hero-section__actions">
+                    <button
+                        id="book-now-button"
+                        class="button button--accent"
+                        type="button"
+                        name="bookNow"
+                        aria-label="Book your next trip"
+                        data-js="book-now-button"
+                    >
+                        Book now
+                    </button>
+                    <a id="about-cta-link" class="button button--secondary" href="./about_us.html">Meet our team</a>
+                </div>
+            </div>
+            <div id="hero-highlight-card" class="highlight-card" aria-label="Featured travel promise">
+                <span id="highlight-badge" class="highlight-card__badge">Signature selection</span>
+                <h2 id="highlight-title" class="highlight-card__title">Destinations chosen for atmosphere, culture, and ease</h2>
+                <p id="highlight-description" class="highlight-card__text">
+                    Start with trusted inspiration, then layer in filters and recommendations through JavaScript-ready hooks already built into the page.
+                </p>
+            </div>
+        </section>
+    </main>
+    <script src="./travel_recommendation.js" ></script>
+</body>
+</html>

@@ -1,0 +1,342 @@
+:root {
+    --bg: #f4efe6;
+    --bg-strong: #e7dccb;
+    --panel: rgba(255, 252, 245, 0.84);
+    --panel-strong: #fffdf8;
+    --text: #1e1b16;
+    --muted: #6f665a;
+    --line: rgba(45, 35, 24, 0.12);
+    --accent: #a86b38;
+    --accent-soft: #d8b08a;
+    --shadow: 0 24px 50px rgba(61, 44, 26, 0.12);
+    --radius-xl: 32px;
+    --radius-lg: 24px;
+    --radius-md: 16px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: "Manrope", sans-serif;
+    color: var(--text);
+    background:
+        radial-gradient(circle at top right, rgba(168, 107, 56, 0.16), transparent 24%),
+        linear-gradient(180deg, rgba(249, 244, 236, 0.9) 0%, rgba(242, 234, 223, 0.86) 100%),
+        url("./images/background.jpg") center / cover no-repeat fixed;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.site-header {
+    padding: 28px 32px 0;
+}
+
+.site-nav,
+.page-content {
+    width: min(1160px, calc(100% - 32px));
+    margin: 0 auto;
+}
+
+.site-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 18px 24px;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: rgba(255, 250, 242, 0.72);
+    backdrop-filter: blur(14px);
+    box-shadow: var(--shadow);
+}
+
+.brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.brand__logo {
+    width: 46px;
+    height: 46px;
+    object-fit: contain;
+}
+
+.brand__name {
+    font-size: 1rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.nav-menu,
+.social-links {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav-menu__link,
+.social-links__link,
+.button {
+    transition: 180ms ease;
+}
+
+.nav-menu__link,
+.social-links__link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 16px;
+    border-radius: 999px;
+    color: var(--muted);
+}
+
+.nav-menu__link:hover,
+.nav-menu__link--active,
+.social-links__link:hover {
+    color: var(--text);
+    background: rgba(45, 35, 24, 0.06);
+}
+
+.page-content {
+    display: grid;
+    grid-template-columns: 120px minmax(0, 1fr);
+    gap: 28px;
+    padding: 56px 0 40px;
+}
+
+.hero-section {
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(260px, 0.8fr);
+    gap: 28px;
+}
+
+.hero-section__content,
+.story-card,
+.team-card,
+.social-sidebar {
+    border: 1px solid var(--line);
+    background: var(--panel);
+    box-shadow: var(--shadow);
+}
+
+.hero-section__content,
+.story-card {
+    border-radius: var(--radius-xl);
+    padding: 48px;
+}
+
+.hero-section__eyebrow,
+.section-heading__eyebrow {
+    margin: 0 0 14px;
+    color: var(--accent);
+    font-size: 0.82rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+
+.hero-section__title,
+.section-heading__title,
+.story-card__title {
+    margin: 0;
+    font-family: "Playfair Display", serif;
+}
+
+.hero-section__title {
+    font-size: clamp(2.8rem, 5vw, 4.6rem);
+    line-height: 1;
+}
+
+.hero-section__description,
+.story-card__text,
+.team-card__description {
+    color: var(--muted);
+    line-height: 1.8;
+}
+
+.hero-section__description {
+    margin: 20px 0 0;
+    max-width: 600px;
+}
+
+.story-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background:
+        linear-gradient(160deg, rgba(255, 255, 255, 0.74), rgba(231, 220, 203, 0.88));
+}
+
+.story-card__title {
+    font-size: 2rem;
+}
+
+.team-section {
+    margin-top: 28px;
+    padding: 32px;
+    border: 1px solid var(--line);
+    border-radius: var(--radius-xl);
+    background: rgba(255, 252, 245, 0.72);
+    box-shadow: var(--shadow);
+}
+
+.section-heading {
+    margin-bottom: 20px;
+}
+
+.section-heading__title {
+    font-size: 2.6rem;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 22px;
+}
+
+.team-card {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    min-height: 100%;
+    padding: 32px;
+    border-radius: var(--radius-lg);
+    background: var(--panel-strong);
+}
+
+.team-card__avatar {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    padding: 8px;
+    background: linear-gradient(135deg, rgba(168, 107, 56, 0.16), rgba(216, 176, 138, 0.26));
+}
+
+.team-card__name {
+    margin: 0;
+    font-size: 1.3rem;
+}
+
+.team-card__role {
+    display: inline-flex;
+    width: fit-content;
+    padding: 8px 12px;
+    border-radius: 999px;
+    background: rgba(168, 107, 56, 0.12);
+    color: var(--accent);
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+.button {
+    width: fit-content;
+    padding: 12px 18px;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: transparent;
+    color: var(--text);
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.button:hover {
+    background: var(--text);
+    color: #fffaf2;
+    transform: translateY(-1px);
+}
+
+.social-sidebar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 12px;
+    border-radius: 999px;
+}
+
+.social-links {
+    flex-direction: column;
+    width: 100%;
+}
+
+.social-links__link {
+    width: 100%;
+    text-align: center;
+}
+
+@media (max-width: 1040px) {
+    .site-nav,
+    .page-content,
+    .hero-section {
+        width: min(100% - 24px, 1160px);
+        grid-template-columns: 1fr;
+    }
+
+    .page-content,
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .site-nav {
+        border-radius: 28px;
+    }
+
+    .social-sidebar {
+        border-radius: 28px;
+    }
+
+    .social-links {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 720px) {
+    .site-header {
+        padding: 18px 12px 0;
+    }
+
+    .site-nav,
+    .hero-section__content,
+    .team-section,
+    .team-card {
+        padding: 24px;
+    }
+
+    .site-nav {
+        gap: 18px;
+    }
+
+    .brand,
+    .nav-menu {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .hero-section__title {
+        font-size: clamp(2.3rem, 12vw, 3.6rem);
+    }
+
+    .button {
+        width: 100%;
+        justify-content: center;
+    }
+}

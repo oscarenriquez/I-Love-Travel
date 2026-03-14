@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact I Love Travel to discuss destination ideas, travel planning, or partnerships.">
+    <title>I Love Travel - Contact Us</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./contact_us.css">
+</head>
+<body id="contact-page" class="page page-contact">
+    <header id="site-header" class="site-header">
+        <nav id="primary-navigation" class="site-nav" aria-label="Primary navigation">
+            <a id="brand-link" class="brand" href="./travel_recommendation.html" aria-label="I Love Travel home">
+                <img id="brand-logo" class="brand__logo" src="./images/logo.png" alt="I Love Travel logo">
+                <span id="brand-name" class="brand__name">I Love Travel</span>
+            </a>
+            <ul id="nav-menu" class="nav-menu">
+                <li class="nav-menu__item"><a id="nav-home" class="nav-menu__link" href="./travel_recommendation.html">Home</a></li>
+                <li class="nav-menu__item"><a id="nav-about" class="nav-menu__link" href="./about_us.html">About Us</a></li>
+                <li class="nav-menu__item"><a id="nav-contact" class="nav-menu__link nav-menu__link--active" href="./contact_us.html" aria-current="page">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="page-content" class="page-content">
+        <aside id="social-sidebar" class="social-sidebar" aria-label="Social media links">
+            <ul id="social-links" class="social-links">
+                <li class="social-links__item"><a id="social-x" class="social-links__link" href="#" target="_blank" rel="noopener noreferrer" data-platform="x">X.com</a></li>
+                <li class="social-links__item"><a id="social-facebook" class="social-links__link" href="#" target="_blank" rel="noopener noreferrer" data-platform="facebook">Facebook</a></li>
+                <li class="social-links__item"><a id="social-instagram" class="social-links__link" href="#" target="_blank" rel="noopener noreferrer" data-platform="instagram">Instagram</a></li>
+                <li class="social-links__item"><a id="social-youtube" class="social-links__link" href="#" target="_blank" rel="noopener noreferrer" data-platform="youtube">YouTube</a></li>
+            </ul>
+        </aside>
+        <section id="contact-section" class="contact-section" aria-labelledby="contact-title">
+            <div id="contact-intro" class="contact-section__intro">
+                <p id="contact-eyebrow" class="contact-section__eyebrow">Start the conversation</p>
+                <h1 id="contact-title" class="contact-section__title">Contact Us</h1>
+                <p id="contact-description" class="contact-section__description">Share your travel goals, questions, or partnership ideas and we’ll respond with a polished next step.</p>
+            </div>
+
+            <article id="contact-form-card" class="contact-form-card">
+                <form id="contact-form" class="contact-form" name="contactForm" action="#" method="post" novalidate>
+                    <div id="contact-field-name" class="form-field">
+                        <label id="contact-name-label" class="form-field__label" for="contact-name">Name</label>
+                        <input class="form-field__input" type="text" id="contact-name" name="name" autocomplete="name" required aria-required="true" placeholder="Your full name" data-js="contact-name">
+                    </div>
+
+                    <div id="contact-field-email" class="form-field">
+                        <label id="contact-email-label" class="form-field__label" for="contact-email">Email</label>
+                        <input class="form-field__input" type="email" id="contact-email" name="email" autocomplete="email" required aria-required="true" placeholder="name@example.com" data-js="contact-email">
+                    </div>
+
+                    <div id="contact-field-message" class="form-field">
+                        <label id="contact-message-label" class="form-field__label" for="contact-message">Message</label>
+                        <textarea class="form-field__textarea" name="message" id="contact-message" rows="6" required aria-required="true" placeholder="Tell us where you want to go or what you need help with" data-js="contact-message"></textarea>
+                    </div>
+
+                    <div id="contact-form-actions" class="contact-form__actions">
+                        <button id="contact-submit" class="button button--primary" type="submit" name="submitContactForm" data-js="contact-submit">Submit</button>
+                        <button id="contact-reset" class="button button--ghost" type="reset" name="resetContactForm" data-js="contact-reset">Clear</button>
+                    </div>
+                </form>
+            </article>
+        </section>
+    </main>
+
+</body>
+</html>

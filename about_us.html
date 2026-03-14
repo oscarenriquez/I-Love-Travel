@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn more about I Love Travel, our philosophy, and the team behind the recommendations.">
+    <title>I Love Travel - About Us</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./about_us.css">
+</head>
+<body id="about-page" class="page page-about">
+    <header id="site-header" class="site-header">
+        <nav id="primary-navigation" class="site-nav" aria-label="Primary navigation">
+            <a id="brand-link" class="brand" href="./travel_recommendation.html" aria-label="I Love Travel home">
+                <img id="brand-logo" class="brand__logo" src="./images/logo.png" alt="I Love Travel logo">
+                <span id="brand-name" class="brand__name">I Love Travel</span>
+            </a>
+            <ul id="nav-menu" class="nav-menu">
+                <li class="nav-menu__item"><a id="nav-home" class="nav-menu__link" href="./travel_recommendation.html">Home</a></li>
+                <li class="nav-menu__item"><a id="nav-about" class="nav-menu__link nav-menu__link--active" href="./about_us.html" aria-current="page">About Us</a></li>
+                <li class="nav-menu__item"><a id="nav-contact" class="nav-menu__link" href="./contact_us.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="page-content" class="page-content">
+        <aside id="social-sidebar" class="social-sidebar" aria-label="Social media links">
+            <ul id="social-links" class="social-links">
+                <li class="social-links__item"><a id="social-x" class="social-links__link" href="#" target="_blank" rel="noopener noreferrer" data-platform="x">X.com</a></li>
+                <li class="social-links__item"><a id="social-facebook" class="social-links__link" href="#" target="_blank" rel="noopener noreferrer" data-platform="facebook">Facebook</a></li>
+                <li class="social-links__item"><a id="social-instagram" class="social-links__link" href="#" target="_blank" rel="noopener noreferrer" data-platform="instagram">Instagram</a></li>
+                <li class="social-links__item"><a id="social-youtube" class="social-links__link" href="#" target="_blank" rel="noopener noreferrer" data-platform="youtube">YouTube</a></li>
+            </ul>
+        </aside>
+        <div id="about-content" class="about-content">
+            <section id="about-hero-section" class="hero-section" aria-labelledby="about-title">
+                <div id="about-hero-content" class="hero-section__content">
+                    <p id="about-eyebrow" class="hero-section__eyebrow">Built for thoughtful travel</p>
+                    <h1 id="about-title" class="hero-section__title">About Us</h1>
+                    <p id="about-description" class="hero-section__description">
+                        We design travel inspiration with editorial polish, practical utility, and the flexibility to support richer JavaScript-driven experiences over time.
+                    </p>
+                </div>
+            </section>
+            <section id="team-section" class="team-section" aria-labelledby="team-title">
+                <div id="team-section-header" class="section-heading">
+                    <p id="team-eyebrow" class="section-heading__eyebrow">People behind the brand</p>
+                    <h2 id="team-title" class="section-heading__title">Our Team</h2>
+                </div>
+                <article id="team-grid" class="team-grid" aria-label="Team members">
+                    <div id="team-member-john" class="team-card" data-member="john-doe">
+                        <img id="team-member-john-avatar" class="team-card__avatar" src="./images/avatar.png" alt="Portrait of John Doe">
+                        <h3 id="team-member-john-name" class="team-card__name">John Doe</h3>
+                        <p id="team-member-john-description" class="team-card__description">Defines the vision, partnerships, and premium positioning of the travel experience.</p>
+                        <span id="team-member-john-role" class="team-card__role">CEO</span>
+                        <button id="team-member-john-button" class="button button--secondary" type="button" name="viewJohnProfile" data-js="team-profile-button">View profile</button>
+                    </div>
+
+                    <div id="team-member-celina" class="team-card" data-member="celina-thomas">
+                        <img id="team-member-celina-avatar" class="team-card__avatar" src="./images/avatar.png" alt="Portrait of Celina Thomas">
+                        <h3 id="team-member-celina-name" class="team-card__name">Celina Thomas</h3>
+                        <p id="team-member-celina-description" class="team-card__description">Shapes destination narratives, campaign direction, and the content strategy across the platform.</p>
+                        <span id="team-member-celina-role" class="team-card__role">Team Lead</span>
+                        <button id="team-member-celina-button" class="button button--secondary" type="button" name="viewCelinaProfile" data-js="team-profile-button">View profile</button>
+                    </div>
+
+                    <div id="team-member-mike" class="team-card" data-member="mike-tyson">
+                        <img id="team-member-mike-avatar" class="team-card__avatar" src="./images/avatar.png" alt="Portrait of Mike Tyson">
+                        <h3 id="team-member-mike-name" class="team-card__name">Mike Tyson</h3>
+                        <p id="team-member-mike-description" class="team-card__description">Oversees delivery quality, cross-functional execution, and launch readiness for new features.</p>
+                        <span id="team-member-mike-role" class="team-card__role">Delivery Head</span>
+                        <button id="team-member-mike-button" class="button button--secondary" type="button" name="viewMikeProfile" data-js="team-profile-button">View profile</button>
+                    </div>
+                </article>
+            </section>
+        </div>
+    </main>
+
+</body>
+</html>
